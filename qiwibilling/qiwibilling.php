@@ -33,7 +33,7 @@ if (empty($m))
 
 		cot_block($pinfo['pay_status'] == 'new' || $pinfo['pay_status'] == 'process');
 		
-		$summ = number_format($pinfo['pay_summ']*$cfg['plugin']['qiwibilling']['rate'], 2);
+		$summ = number_format($pinfo['pay_summ']*$cfg['plugin']['qiwibilling']['rate'], 2, '.', '');
 		
 		if($cfg['plugin']['qiwibilling']['protocol'] == 'rest')
 		{
